@@ -6,8 +6,7 @@ import './_contactPage.scss';
 const ContactPage = () => {
 
   const {ParallaxContainer} = useParallax({
-    className: 'contact',
-    sensivity: 100
+    className: 'contact'
   });
 
   return (
