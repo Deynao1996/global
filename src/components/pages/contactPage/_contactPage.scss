@@ -1,0 +1,24 @@
+.contact {
+  background: url('../../../resources/img/contact-visual.png') center center/cover no-repeat;
+  height: 100%;
+  position: relative;
+  &__info {
+    padding: 39px 0;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 302px;
+    height: 400px;
+    background-color: #0b0b0b;
+    box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &-adress, &-mail, &-tel {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+}

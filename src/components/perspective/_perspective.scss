@@ -1,0 +1,33 @@
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  height: 100%;
+  position: relative;
+}
+
+.perspective {
+  background-color: #0c0c0c;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.app {
+  background-color: #0c0c0c;
+  width: 100%;
+  height: 100vh;
+  padding: 21px 0 75px 0;
+  z-index: 1;
+  transition: .5s all;
+  &_transform {
+    padding: 30px;
+    transform: translateZ(-1800px) rotateY(45deg) translateX(-40%);
+    outline: 30px solid #0f33ff;
+    pointer-events: none;
+  }
+}

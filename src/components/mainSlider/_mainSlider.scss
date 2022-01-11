@@ -1,0 +1,92 @@
+.slider {
+  &__btn {
+    position: absolute;
+    top: 53%;
+    left: 14%;
+    width: 53px;
+    height: 54px;
+    background-color: #282828;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    z-index: 10;
+    svg {
+      width: 18px;
+      height: 15px;
+      fill: white;
+    }
+    &-right {
+      left: 84%;
+    }
+  }
+  &__item {
+    opacity: 0.5;
+    transition: .3s all;
+    &-img {
+      width: 167px;
+      height: 168px;
+      display: block;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+    }
+    &-title {
+      opacity: 0.5;
+      font-size: 12.1px;
+      line-height: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      text-align: center;
+    }
+    &_active {
+      opacity: 1;
+      div {
+        width: 330px;
+        height: 331px;
+      }
+      h4 {
+        font-size: 18.1px;
+        line-height: 72px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        opacity: 1;
+      }
+      span {
+        display: block;
+        font-size: 16.1px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #ffffff;
+        opacity: 1;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.slick {
+  &-track {
+    display: flex;
+  }
+  &-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  &-list {
+    overflow: hidden;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.request {
+  padding-top: 69px;
+  position: relative;
+  &__title {
+    font-size: 30.1px;
+    line-height: 72px;
+    font-weight: 900;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    text-align: center;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__form {
+    margin-top: 48px;
+    &-checkbox {
+      visibility: hidden;
+      &:checked {
+        background-color: white;
+      }
+    }
+    &-first {
+      display: flex;
+      justify-content: space-between;
+      width: 700px;
+      div {
+        width: 200px;
+        height: 52px;
+        background-color: #0c0c0c;
+        border: 2px solid #ffffff;
+      }
+    }
+    &-second {
+      margin-top: 39px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 450px;
+      div {
+        width: 200px;
+        height: 52px;
+        background-color: #0c0c0c;
+        border: 2px solid #ffffff;
+        &:first-child {
+          margin-right: 50px;
+        }
+        &:nth-child(3) {
+          margin-top: 39px;
+        }
+      }
+    }
+    &-send {
+      margin-top: 70px;
+      input {
+        width: 315px;
+        font-size: 30.1px;
+        line-height: 72px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #ffffff;
+        &:focus {
+          outline: none;
+        }
+        &:first-child {
+          margin-right: 63px;
+        }
+      }
+    }
+    &-label {
+      display: block;
+      line-height: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s all;
+      svg {
+        visibility: hidden;
+      }
+      &_active {
+        background-color: #0f33ff;
+        svg {
+          visibility: visible;
+          height: 15px;
+          width: 19px;
+          vertical-align: middle
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.perspective__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  &-item {
+    position: relative;
+    a {
+      text-decoration: none;
+      font-size: 55px;
+      line-height: 72px;
+      font-weight: 900;
+      letter-spacing: 0.025em;
+      color: #ffffff;
+    }
+    &_active {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 14px;
+        background-color: #0f33ff;
+      }
+    }
+  }
+}
