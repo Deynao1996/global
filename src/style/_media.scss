@@ -1,0 +1,149 @@
+@media (max-width: 1200px) {
+  .promo {
+    padding: 93px 109px 0 109px;
+  }
+  .works {
+    padding: 50px 183px 0 183px;
+  }
+  .belive {
+    padding: 50px 0 0 110px;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .promo {
+    padding: 93px 0px 0 0px;
+  }
+  .works {
+    padding: 50px 50px 0 50px;
+  }
+  .contact {
+    &__info {
+      top: 50%;
+      right: 0;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+  .request__form {
+    &-send {
+      margin-top: 15px;
+    }
+  }
+  .perspective {
+    &__menu {
+      right: 0;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .promo {
+    padding: 27px 0 0 0;
+    &__title {
+      font-size: 55px;
+    }
+    &__bg {
+      display: none;
+    }
+    &__item {
+      width: fit-content;
+      span {
+        font-size: 8px;
+      }
+      &-title {
+        font-size: 10px;
+        width: min-content;
+      }
+    }
+  }
+  .slider {
+    &__btn {
+      top: 26%;
+    }
+    &__item {
+      &_active {
+        div {
+          width: 190px;
+          height: 190px;
+        }
+      }
+    }
+  }
+  .works {
+    padding: 50px 20px 0 20px;
+  }
+  .belive {
+    padding: 50px 0 0 0;
+    &__title {
+      width: min-content;
+      letter-spacing: normal;
+    }
+    &__items {
+      display: none;
+    }
+  }
+  .request {
+    &__wrapper {
+      flex-wrap: wrap;
+      align-items: stretch;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__form {
+      &-first, &-second {
+        width: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        div {
+          width: 145px;
+          margin-top: 25px;
+          margin-right: 0;
+          &:nth-child(3) {
+            margin-top: 25px;
+          }
+          label {
+            font-size: 13px;
+          }
+        }
+      }
+      &-send {
+        input {
+          margin-right: 0;
+          width: 100%;
+          line-height: 50px;
+        }
+      }
+      &-second {
+        div {
+          &:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .btn__form {
+      width: 100%;
+    }
+  }
+  .perspective {
+    &__menu {
+      right: -27px;
+      &-item {
+        a {
+          font-size: 34px;
+        }
+        &_active {
+          &:before {
+            height: 7px;
+          }
+        }
+      }
+    }
+  }
+}

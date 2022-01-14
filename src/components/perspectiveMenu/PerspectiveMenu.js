@@ -19,7 +19,7 @@ const svgStyle = {
   position: 'absolute',
   color: 'white',
   top: '4%',
-  right: '7%',
+  right: '4%',
   cursor: 'pointer'
 }
 

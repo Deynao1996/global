@@ -1,8 +1,13 @@
 .request {
-  padding-top: 69px;
   position: relative;
+  height: 87%;
+  width: 95%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__title {
-    font-size: 30.1px;
+    font-size: 30px;
     line-height: 72px;
     font-weight: 900;
     letter-spacing: 0.025em;
@@ -15,7 +20,6 @@
     align-items: center;
   }
   &__form {
-    margin-top: 48px;
     &-checkbox {
       visibility: hidden;
       &:checked {
@@ -26,6 +30,7 @@
       display: flex;
       justify-content: space-between;
       width: 700px;
+      flex-wrap: wrap;
       div {
         width: 200px;
         height: 52px;
@@ -53,7 +58,7 @@
       }
     }
     &-send {
-      margin-top: 70px;
+      margin-top: 50px;
       input {
         width: 315px;
         font-size: 30.1px;
@@ -68,7 +73,7 @@
           outline: none;
         }
         &:first-child {
-          margin-right: 63px;
+          margin-right: 25px;
         }
       }
     }

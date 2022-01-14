@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
 
 import MainSlider from "../../mainSlider/MainSlider";
 
@@ -11,7 +10,6 @@ const WorksPage = () => {
 
   return (
     <div className="works">
-        <Link to="/requestPage" className="btn btn_abs">hire us</Link>
         <h3 className="works__title">Selected work</h3>
         <MainSlider
           imageIndex={imageIndex}

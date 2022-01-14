@@ -1,24 +1,35 @@
 .belive {
-  padding: 108px 0 0 200px;
+  padding: 50px 0 0 200px;
   position: relative;
+  height: 87%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -1;
   &__bg {
     position: absolute;
     top: 7%;
     right: 14%;
+    z-index: -1;
   }
   &__title {
-    font-size: 82px;
+    font-size: 68px;
     line-height: 72px;
     font-weight: 900;
     letter-spacing: 0.025em;
     color: #ffffff;
     user-select: none;
     position: relative;
+    flex: 1;
+    margin-bottom: 40px;
+    width: fit-content;
+    z-index: 1;
     &:after {
       position: absolute;
       content: "";
-      top: 22%;
-      left: calc(27% + 8px);
+      top: 23%;
+      left: 69%;
       border-radius: 100%;
       width: 31px;
       height: 31px;
@@ -27,8 +38,8 @@
     &:before {
       position: absolute;
       content: "";
-      bottom: 0;
-      left: 26%;
+      bottom: 1%;
+      right: 33%;
       width: 9px;
       height: 9px;
       background-color: #0f33ff;
@@ -58,6 +69,7 @@
   &__items {
     margin-top: 28px;
     display: flex;
+    flex: 1;
   }
   &__item {
     margin-right: 30px;

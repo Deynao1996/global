@@ -7,7 +7,6 @@ const PromoPage = () => {
 
   return (
     <div className="promo">
-      <div className="promo__bg"><img src={promoBg} alt="bg"/></div>
       <h1 className="promo__title">Your next <br/>
         interactive <br/>
         experience <br/>
@@ -21,6 +20,7 @@ const PromoPage = () => {
         </span>
       </NavLink>
       <div className="promo__items">
+          <div className="promo__bg"><img src={promoBg} alt="bg"/></div>
           <div className="promo__item">
             <h2 className="promo__item-title">Metiew & Smith</h2>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</span>

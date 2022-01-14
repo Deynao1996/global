@@ -1,7 +1,8 @@
 .container {
   margin: 0 auto;
   width: 1440px;
-  height: 100%;
+  max-width: 90%;
+  height: 100vh;
   position: relative;
 }
 
@@ -25,7 +26,7 @@
   z-index: 1;
   transition: .5s all;
   &_transform {
-    padding: 30px;
+    overflow: hidden;
     transform: translateZ(-1800px) rotateY(45deg) translateX(-40%);
     outline: 30px solid #0f33ff;
     pointer-events: none;

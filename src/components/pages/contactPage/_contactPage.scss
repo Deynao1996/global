@@ -1,7 +1,11 @@
 .contact {
   background: url('../../../resources/img/contact-visual.png') center center/cover no-repeat;
-  height: 100%;
-  position: relative;
+  height: 100vh;
+  width: 120%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: -10%;
   &__info {
     padding: 39px 0;
     position: absolute;

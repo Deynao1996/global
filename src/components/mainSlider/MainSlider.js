@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import {useMediaQuery} from 'react-responsive';
 
 import victory from '../../resources/img/work-victory.jpg';
 import alexNowak from '../../resources/img/work-alex-nowak.jpg';
@@ -48,16 +49,17 @@ const PrevArrow = ({onClick}) => {
 }
 
 const MainSlider = ({imageIndex, setImageIndex}) => {
-
+  const isMobile = useMediaQuery({query: '(max-width: 576px)'});
   const settings = {
     className: 'slider',
     centerMode: true,
     infinite: true,
     centerPadding: 0,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3,
     speed: 500,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    swipe: false,
     beforeChange: (current, next) => setImageIndex(next)
   };
 

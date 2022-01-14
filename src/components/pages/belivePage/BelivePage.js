@@ -1,5 +1,3 @@
-import {Link} from 'react-router-dom';
-
 import aboutVisual from '../../../resources/img/about-visual.png';
 import winners from '../../../resources/img/about-winners.jpg';
 import philosophy from '../../../resources/img/about-philosophy.jpg';
@@ -11,7 +9,6 @@ const BelivePage = () => {
 
   return (
     <div className="belive">
-        <Link to="/requestPage" className="btn btn_abs">hire us</Link>
         <h5 className="belive__title">We <br/> believe in <br/>passionate<br/> people
           <span className="rhombus"></span>
           <span className="triangle"></span>
