@@ -66,10 +66,10 @@ const Perspective = ({children}) => {
   function onTouchRouting(e) {
    touchEndRef.current = e.changedTouches[0].clientY;
    touchDirection.current = touchEndRef.current - touchStartRef.current;
-   
-   if (touchDirection.current === 0) {
+   console.log(touchDirection.current);
+   if (touchDirection.current <= 40 & touchDirection.current >= -40) {
      return;
-   } else if (touchDirection.current > 0) {
+   } else if (touchDirection.current > 40) {
      changeRouteUp(pathname);
    } else {
      changeRouteDown(pathname);
