@@ -1,4 +1,4 @@
-import {useCheckBox} from '../../../hooks/hook';
+import {useCheckBox, useParallax} from '../../../hooks/hook';
 
 import './_requestPage.scss';
 
@@ -16,8 +16,12 @@ const secondFormContent = [
 
 const RequestPage = () => {
 
+  const {ParallaxContainer} = useParallax({
+    className: 'request'
+  });
+
   return (
-    <div className="request">
+    <ParallaxContainer>
         <h6 className="request__title">You want us to do</h6>
         <form className="request__form" action="#">
           <div className="request__wrapper">
@@ -34,7 +38,7 @@ const RequestPage = () => {
           <button type="submit" className="btn btn__form">Send request</button>
           </div>
         </form>
-    </div>
+    </ParallaxContainer>
   )
 };
 

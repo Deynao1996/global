@@ -1,12 +1,19 @@
 import {NavLink} from 'react-router-dom';
+import {useParallax} from '../../../hooks/hook.js';
+
 import promoBg from '../../../resources/img/introduction-visual.png';
 
 import './_promoPage.scss';
 
 const PromoPage = () => {
 
+  const {ParallaxContainer} = useParallax({
+    className: 'promo'
+  });
+
+
   return (
-    <div className="promo">
+    <ParallaxContainer>
       <h1 className="promo__title">Your next <br/>
         interactive <br/>
         experience <br/>
@@ -34,7 +41,7 @@ const PromoPage = () => {
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</span>
           </div>
       </div>
-    </div>
+    </ParallaxContainer>
   )
 };
 

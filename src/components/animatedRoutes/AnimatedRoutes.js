@@ -13,7 +13,7 @@ const routesArr = [
   {path: '/worksPage', element: <WorksPage />},
   {path: '/belivePage', element: <BelivePage />},
   {path: '/contactPage', element: <ContactPage />},
-  {path: '/requestPage', element: <RequestPage />}
+  {path: '/requestPage', element: <RequestPage />},
 ];
 
 const AnimatedRoutes = () => {
@@ -32,8 +32,8 @@ const AnimatedRoutes = () => {
     leave: leaveStyles,
     trail: 500,
     delay: !firstMountingRef.current && 300,
-    onRest: () => firstMountingRef.current = false,
     onStart: () => prevRouteRef.current = location.pathname,
+    onRest: () => firstMountingRef.current = false,
     config: {
       duration: 500
     }
@@ -56,7 +56,7 @@ const AnimatedRoutes = () => {
     }
   }
 
-  setTransformDirection();
+
   return (
     transitions((config, item) => (
       <animated.div style={config}>

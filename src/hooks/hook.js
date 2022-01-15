@@ -39,9 +39,14 @@ const useParallax = ({className, sensivity}) => {
   const sens = sensivity ? sensivity : 100;
   const [propss, sets] = useSpring(() => ({xys: [0, 0, sens]}));
 
-  const calc = (x, y, sens) => [-(y - window.innerHeight / 2) / sens, (x - window.innerWidth / 2) / sens, sens];
-  const trans = (x, y) => `perspective(600px) translateX(${x}px) translateY(${y}px)`;
-
+  const calc = (x, y, sens) => {
+    return [-(y - window.innerHeight / 2) / sens, (x - window.innerWidth / 2) / sens, sens];
+  }
+  const trans = (x, y) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) translateZ(${x}px)`;
+  // const trans = (x, y) => {
+  //   console.log(x, y);
+  //   return `matrix3d(0.994898, 0, -0.100883, 0, 0.00239437, 0.999718, 0.0236132, 0, 0.100854, -0.0237342, 0.994618, 0, 0, 0, 0, 1)`;
+  // }
 
   const ParallaxContainer = ({children, ...props}) => (
     <animated.div

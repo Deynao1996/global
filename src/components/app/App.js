@@ -1,4 +1,5 @@
 import {useMediaQuery} from 'react-responsive';
+import {DataProvider} from '../../contexts/DataContext.js';
 
 import Perspective from '../perspective/Perspective';
 import AnimatedRoutes from '../animatedRoutes/AnimatedRoutes';
@@ -18,9 +19,11 @@ const App = () => {
   return (
     isTablet || isMobile ?
     <Offer /> :
-    <Perspective>
-      <AnimatedRoutes />
-    </Perspective>
+    <DataProvider>
+      <Perspective>
+        <AnimatedRoutes />
+      </Perspective>
+    </DataProvider>
   )
 };
 

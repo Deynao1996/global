@@ -1,3 +1,5 @@
+import {useParallax} from '../../../hooks/hook.js';
+
 import aboutVisual from '../../../resources/img/about-visual.png';
 import winners from '../../../resources/img/about-winners.jpg';
 import philosophy from '../../../resources/img/about-philosophy.jpg';
@@ -7,8 +9,12 @@ import './_belivePage.scss';
 
 const BelivePage = () => {
 
+  const {ParallaxContainer} = useParallax({
+    className: 'belive'
+  });
+
   return (
-    <div className="belive">
+    <ParallaxContainer>
         <h5 className="belive__title">We <br/> believe in <br/>passionate<br/> people
           <span className="rhombus"></span>
           <span className="triangle"></span>
@@ -42,7 +48,7 @@ const BelivePage = () => {
             <span>History</span>
           </div>
         </div>
-    </div>
+    </ParallaxContainer>
   )
 };
 

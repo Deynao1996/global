@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {useNavigate, useLocation} from 'react-router-dom';
 
 import PerspectiveMenu from '../perspectiveMenu/PerspectiveMenu';
@@ -9,6 +9,7 @@ import './_perspective.scss';
 
 const Perspective = ({children}) => {
   const [activeMenu, setActiveMenu] = useState(false);
+  const [isAnimation, setIsAnimation] = useState(false);
   const {pathname} = useLocation();
   const navigate = useNavigate();
   const touchStartRef = useRef(null);
@@ -66,7 +67,7 @@ const Perspective = ({children}) => {
   function onTouchRouting(e) {
    touchEndRef.current = e.changedTouches[0].clientY;
    touchDirection.current = touchEndRef.current - touchStartRef.current;
-   console.log(touchDirection.current);
+
    if (touchDirection.current <= 40 & touchDirection.current >= -40) {
      return;
    } else if (touchDirection.current > 40) {
@@ -76,8 +77,12 @@ const Perspective = ({children}) => {
    }
   }
 
-  function onScrollRouting(e) {
+  async function onScrollRouting(e) {
     const delta = e.deltaY;
+
+    if (isAnimation) {
+      return;
+    }
 
     if (delta < 0) {
       changeRouteUp(pathname);
@@ -85,6 +90,14 @@ const Perspective = ({children}) => {
       changeRouteDown(pathname);
     }
   }
+
+  useEffect(() => {
+    setIsAnimation(true);
+
+    setTimeout(() => {
+      setIsAnimation(false);
+    }, 1300)
+  }, [pathname]);
 
 
   return (
