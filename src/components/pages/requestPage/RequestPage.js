@@ -21,8 +21,8 @@ const RequestPage = () => {
   });
 
   return (
-    <ParallaxContainer>
-        <h6 className="request__title">You want us to do</h6>
+    <div className="request">
+      <h6 className="request__title">You want us to do</h6>
         <form className="request__form" action="#">
           <div className="request__wrapper">
             <div className="request__form-first">
@@ -38,7 +38,7 @@ const RequestPage = () => {
           <button type="submit" className="btn btn__form">Send request</button>
           </div>
         </form>
-    </ParallaxContainer>
+    </div>
   )
 };
 

@@ -36,7 +36,7 @@ const useCheckBox = (initial) => {
 }
 
 const useParallax = ({className, sensivity}) => {
-  const sens = sensivity ? sensivity : 100;
+  const sens = sensivity ? sensivity : 200;
   const [propss, sets] = useSpring(() => ({xys: [0, 0, sens]}));
 
   const calc = (x, y, sens) => {

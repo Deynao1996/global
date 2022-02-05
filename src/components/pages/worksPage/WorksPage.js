@@ -14,12 +14,12 @@ const WorksPage = () => {
   });
 
   return (
-    <ParallaxContainer>
-        <h3 className="works__title">Selected work</h3>
+    <div className="works">
+      <h3 className="works__title">Selected work</h3>
         <MainSlider
           imageIndex={imageIndex}
           setImageIndex={setImageIndex}/>
-    </ParallaxContainer>
+    </div>
   )
 };
 
