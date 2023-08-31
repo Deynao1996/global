@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  width: 1440px;
+  // width: 1440px;
   max-width: 90%;
   height: 100vh;
   position: relative;
@@ -22,9 +22,10 @@
   background-color: #0c0c0c;
   width: 100%;
   height: 100vh;
+  height: 100vh;
   padding: 21px 0 75px 0;
   z-index: 1;
-  transition: .5s all;
+  transition: 0.5s all;
   &_transform {
     overflow: hidden;
     transform: translateZ(-1800px) rotateY(45deg) translateX(-40%);

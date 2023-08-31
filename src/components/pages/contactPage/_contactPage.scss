@@ -1,12 +1,13 @@
 .contact {
-  background: url('../../../resources/img/contact-visual.png') center center/cover no-repeat;
+  background: url('../../../resources/img/contact-visual.png') center
+    center/cover no-repeat;
   height: 100vh;
   width: 120%;
   margin: 0 auto;
   position: fixed;
   top: 0;
   left: -10%;
-  transition: .2s all;
+  transition: 0.2s all;
   z-index: 0;
   &__info {
     padding: 39px 0;
@@ -16,12 +17,14 @@
     width: 302px;
     height: 400px;
     background-color: #0b0b0b;
-    box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    &-adress, &-mail, &-tel {
+    &-adress,
+    &-mail,
+    &-tel {
       font-size: 14px;
       font-weight: 700;
       color: #ffffff;

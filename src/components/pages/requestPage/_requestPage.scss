@@ -1,12 +1,12 @@
 .request {
   position: relative;
-  height: 87%;
+  height: 80vh;
   width: 95%;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: .2s all;
+  transition: 0.2s all;
   &__title {
     font-size: 30px;
     line-height: 72px;
@@ -87,7 +87,7 @@
       color: #ffffff;
       text-align: center;
       cursor: pointer;
-      transition: .5s all;
+      transition: 0.5s all;
       svg {
         visibility: hidden;
       }
@@ -97,7 +97,7 @@
           visibility: visible;
           height: 15px;
           width: 19px;
-          vertical-align: middle
+          vertical-align: middle;
         }
       }
     }

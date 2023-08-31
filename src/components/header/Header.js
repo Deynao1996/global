@@ -1,48 +1,57 @@
-import {Link, useLocation} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
+import headerLogo from '../../resources/img/logo.png'
 
-import headerLogo from '../../resources/img/logo.png';
+import './_header.scss'
 
-import './_header.scss';
-
-const Header = ({setActiveMenu}) => {
-  const {pathname} = useLocation();
+const Header = ({ setActiveMenu }) => {
+  const { pathname } = useLocation()
 
   function setHireBtnStyles() {
-    if (pathname === '/belivePage' || pathname === '/contactPage') {
+    if (pathname === '/believePage' || pathname === '/contactPage') {
       return {
-        pointerEvents: "auto",
+        pointerEvents: 'auto',
         opacity: 1
       }
     } else {
       return {
-        pointerEvents: "none",
+        pointerEvents: 'none',
         opacity: 0
       }
     }
   }
 
-
   return (
     <header className="header">
-      <Link to="/" className="header__logo">
-      <div className="header__img">
-          <img src={headerLogo} alt="logo"/>
+      <div>
+        <Link to="/" className="header__logo">
+          <div className="header__img">
+            <img src={headerLogo} alt="logo" />
+          </div>
+          <span>GLOBAL</span>
+        </Link>
       </div>
-      <span>GLOBAL</span>
-      </Link>
-      <Link
-        to="/requestPage"
-        className="btn btn_header"
-        style={setHireBtnStyles()}>
+      <div>
+        <Link
+          to="/request"
+          className="btn btn_header"
+          style={setHireBtnStyles()}
+        >
           hire us
         </Link>
-      <div
-        className="header__menu"
-        onClick={() => setActiveMenu(true)}>
+      </div>
+
+      <div className="header__menu">
+        <button
+          className="header__box"
+          // tabIndex={1}
+          onClick={() => setActiveMenu(true)}
+          aria-label="Open Menu"
+        >
           <span></span>
+        </button>
       </div>
     </header>
   )
-};
+}
 
-export default Header;
+export default Header
