@@ -2,7 +2,7 @@
 
 Global is a React web application with a dark color scheme and a full-screen app concept. It offers a range of web services including App design, graphic design, motion, UX design, web design, and marketing. Explore this project and its features:
 
-![Global Preview](https://res.cloudinary.com/dkl9cqqui/image/upload/v1695289632/global_txpwkz.jpg)
+![Global Preview](https://res.cloudinary.com/dkl9cqqui/image/upload/v1701341571/global-mockup-resized-min_saqgkw.jpg)
 
 ## Live Demo
 
